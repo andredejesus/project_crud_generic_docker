@@ -5,18 +5,20 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import br.com.project.generic.service.ServiceGeneric;
-import br.com.project.models.Email;
-import br.com.project.repositories.EmailRepository;
+import br.com.project.models.User;
+import br.com.project.repositories.UserRepository;
+
 
 @Service
-public class EmailService extends ServiceGeneric<Email, Long> {
+public class UserService extends ServiceGeneric<User, Long> {
 	
 	@Autowired
-	private EmailRepository emailRepository;
+	private UserRepository userRepository;
 
 	@Override
-	protected JpaRepository<Email, Long> repositoryGeneric() {
-		return emailRepository;
+	protected JpaRepository<User, Long> repositoryGeneric() {
+		return userRepository;
 	}
+	
 
 }

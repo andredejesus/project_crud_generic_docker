@@ -6,19 +6,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.project.generic.controller.ControllerGeneric;
 import br.com.project.generic.service.ServiceGeneric;
-import br.com.project.models.UsuarioModel;
-import br.com.project.services.UsuarioService;
+import br.com.project.models.User;
+import br.com.project.services.UserService;
 
 @RestController
-@RequestMapping("/usuario")
-public class UsuarioController extends ControllerGeneric<UsuarioModel, Long> {
+@RequestMapping("/user")
+public class UserController extends ControllerGeneric<User, Long> {
 	
 	@Autowired
-	private UsuarioService usuarioService;
+	private UserService userService;
 
 	@Override
-	public ServiceGeneric<UsuarioModel, Long> serviceGeneric() {
-		return usuarioService;
+	public ServiceGeneric<User, Long> serviceGeneric() {
+		return userService;
 	}
 
 }

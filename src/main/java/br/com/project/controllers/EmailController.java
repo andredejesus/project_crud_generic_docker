@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.project.generic.controller.ControllerGeneric;
 import br.com.project.generic.service.ServiceGeneric;
-import br.com.project.models.EmailModel;
+import br.com.project.models.Email;
 import br.com.project.services.EmailService;
 
 @RestController
 @RequestMapping("/email")
-public class EmailController extends ControllerGeneric<EmailModel, Long>{
+public class EmailController extends ControllerGeneric<Email, Long>{
 	
 	@Autowired
 	private EmailService emailService;
 
 	@Override
-	public ServiceGeneric<EmailModel, Long> serviceGeneric() {
+	public ServiceGeneric<Email, Long> serviceGeneric() {
 		return emailService;
 	}
 

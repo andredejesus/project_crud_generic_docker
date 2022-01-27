@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "TB_EMAIL")
-public class EmailModel{
+public class Email{
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
